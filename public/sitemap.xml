@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://chat4sell.nahid-hossain.workers.dev/</loc>
+    <loc>https://chat4sell.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://chat4sell.nahid-hossain.workers.dev/features</loc>
+    <loc>https://chat4sell.com/features</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chat4sell.nahid-hossain.workers.dev/pricing</loc>
+    <loc>https://chat4sell.com/pricing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chat4sell.nahid-hossain.workers.dev/contact</loc>
+    <loc>https://chat4sell.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://chat4sell.nahid-hossain.workers.dev/privacy-policy</loc>
+    <loc>https://chat4sell.com/privacy-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

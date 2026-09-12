@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://chat4sell.nahid-hossain.workers.dev/sitemap.xml
+Sitemap: https://chat4sell.com/sitemap.xml
