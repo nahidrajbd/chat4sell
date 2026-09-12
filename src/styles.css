@@ -451,39 +451,47 @@ form.contact-form input, form.contact-form textarea {
 form.contact-form input:focus, form.contact-form textarea:focus { outline: none; border-color: var(--red); }
 form.contact-form textarea { resize: vertical; min-height: 120px; }
 
-.team { margin-top: 90px; }
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.team { margin-top: 0; }
 .team-heading {
-  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 28px; color: #fff;
-  margin: 0 0 32px;
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 24px; color: #fff;
+  margin: 0 0 28px;
 }
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 360px;
 }
-.team-card { text-align: center; }
+.team-card { display: flex; align-items: center; gap: 18px; text-align: left; }
 .team-photo {
-  width: 100%;
-  max-width: 200px;
-  aspect-ratio: 1 / 1;
+  flex: none;
+  width: 84px;
+  height: 108px;
+  aspect-ratio: 7 / 9;
   object-fit: cover;
   border: 1px solid rgba(255, 255, 255, .1);
   display: block;
-  margin: 0 auto 16px;
 }
 .team-name {
-  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 17px; color: #fff;
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; color: #fff;
 }
 .team-role {
   font-size: 13px; color: var(--lab); margin-top: 4px;
 }
-@media (max-width: 600px) {
-  .team { margin-top: 60px; }
-  .team-grid { grid-template-columns: repeat(2, 1fr); max-width: none; }
+
+@media (max-width: 900px) {
+  .contact-layout { grid-template-columns: 1fr; gap: 60px; }
+  .team-grid { max-width: none; }
 }
-@media (max-width: 420px) {
-  .team-grid { grid-template-columns: 1fr; max-width: 220px; }
+@media (max-width: 600px) {
+  .contact-layout { gap: 50px; }
 }
 
 /* ---------- footer ---------- */
