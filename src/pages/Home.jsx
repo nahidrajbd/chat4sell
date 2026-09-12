@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ListeningLogo from '../components/ListeningLogo.jsx';
 
 export default function Home() {
   return (
     <>
       <section className="hero">
         <div className="hero-glow" />
+        <ListeningLogo />
         <h1 className="reveal reveal-1">Never miss a customer message</h1>
         <p className="sub reveal reveal-2">
           Chat4Sell replies instantly across Facebook, Instagram and WhatsApp — closing sales
