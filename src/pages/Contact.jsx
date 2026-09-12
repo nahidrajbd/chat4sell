@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const FOUNDERS = [
   { name: 'Nahid Hossain', role: 'Graphics Designer, Co-Founder', photo: '/nahid.png' },
-  { name: 'Najmul Islam', role: 'Developer, Co-Founder', photo: '/najmul.png' },
+  { name: 'Nazmul Hosen', role: 'Developer, Co-Founder', photo: '/najmul.png' },
   { name: 'Kazi Maruf', role: 'Marketing, Co-Founder', photo: '/kazi-maruf.png' },
 ];
 
