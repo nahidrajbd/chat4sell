@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 
+const FOUNDERS = [
+  { name: 'Nahid Hossain', role: 'Graphics Designer, Co-Founder', photo: '/nahid.png' },
+  { name: 'Najmul Islam', role: 'Developer, Co-Founder', photo: '/najmul.png' },
+  { name: 'Kazi Maruf', role: 'Marketing, Co-Founder', photo: '/kazi-maruf.png' },
+];
+
 export default function Contact() {
   const [sent, setSent] = useState(false);
 
@@ -47,6 +53,20 @@ export default function Contact() {
           </button>
         </form>
       )}
+
+      <div className="team">
+        <div className="page-eyebrow">Team</div>
+        <h2 className="team-heading">Who you'll be talking to</h2>
+        <div className="team-grid">
+          {FOUNDERS.map((f) => (
+            <div className="team-card" key={f.name}>
+              <img src={f.photo} alt={f.name} className="team-photo" width="200" height="200" />
+              <div className="team-name">{f.name}</div>
+              <div className="team-role">{f.role}</div>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

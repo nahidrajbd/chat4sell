@@ -345,6 +345,41 @@ form.contact-form input, form.contact-form textarea {
 form.contact-form input:focus, form.contact-form textarea:focus { outline: none; border-color: var(--red); }
 form.contact-form textarea { resize: vertical; min-height: 120px; }
 
+.team { margin-top: 90px; }
+.team-heading {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 28px; color: #fff;
+  margin: 0 0 32px;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 760px;
+}
+.team-card { text-align: center; }
+.team-photo {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, .1);
+  display: block;
+  margin: 0 auto 16px;
+}
+.team-name {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 17px; color: #fff;
+}
+.team-role {
+  font-size: 13px; color: var(--lab); margin-top: 4px;
+}
+@media (max-width: 600px) {
+  .team { margin-top: 60px; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); max-width: none; }
+}
+@media (max-width: 420px) {
+  .team-grid { grid-template-columns: 1fr; max-width: 220px; }
+}
+
 /* ---------- footer ---------- */
 
 .site-footer {
