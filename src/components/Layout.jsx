@@ -12,6 +12,22 @@ export default function Layout() {
   }, [location.pathname]);
 
   useEffect(() => {
+    const path = location.pathname === '/' ? '/' : location.pathname.replace(/\/+$/, '');
+    const canonicalUrl = `https://chat4sell.com${path}`;
+
+    let link = document.querySelector('link[rel="canonical"]');
+    if (!link) {
+      link = document.createElement('link');
+      link.setAttribute('rel', 'canonical');
+      document.head.appendChild(link);
+    }
+    link.setAttribute('href', canonicalUrl);
+
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute('content', canonicalUrl);
+  }, [location.pathname]);
+
+  useEffect(() => {
     document.body.classList.toggle('nav-open', menuOpen);
   }, [menuOpen]);
 
