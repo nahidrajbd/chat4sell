@@ -20,6 +20,13 @@ const PLANS = [
     features: ['5 connected pages', '5,000 AI replies / mo', 'Priority support'],
     featured: true,
   },
+  {
+    id: 'custom',
+    name: 'Custom',
+    price: 'Let’s talk',
+    period: '',
+    features: ['Unlimited pages', 'Unlimited AI replies', 'Dedicated success manager'],
+  },
 ];
 
 export default function Pricing() {
@@ -29,7 +36,7 @@ export default function Pricing() {
       <h1 className="reveal reveal-1">Plans that cost less than one lost sale</h1>
       <p className="lede reveal reveal-2">No setup fees. Cancel any time. Save up to 70% — launch pricing.</p>
 
-      <div className="grid grid-2">
+      <div className="grid">
         {PLANS.map((p) => (
           <div className={`card${p.featured ? ' featured' : ''}`} id={p.id} key={p.id}>
             {p.badge && <div className="card-badge">{p.badge}</div>}
@@ -54,10 +61,6 @@ export default function Pricing() {
           </div>
         ))}
       </div>
-
-      <p className="pricing-note">
-        Need more volume or custom integrations? <Link to="/contact">Talk to us about Enterprise.</Link>
-      </p>
     </section>
   );
 }
