@@ -193,9 +193,9 @@ nav a:hover, nav a.active { opacity: 1; color: var(--red); }
   display: none;
   position: absolute;
   top: 50%;
-  right: calc(var(--gutter) * -0.2);
-  width: 300px;
-  height: 300px;
+  right: 20px;
+  width: 190px;
+  height: 190px;
   transform: translateY(-50%);
   pointer-events: none;
   z-index: 0;
@@ -205,7 +205,7 @@ nav a:hover, nav a.active { opacity: 1; color: var(--red); }
   .listening-logo { display: block; }
 }
 @media (min-width: 1400px) {
-  .listening-logo { width: 360px; height: 360px; }
+  .listening-logo { width: 230px; height: 230px; }
 }
 
 .listening-svg {
