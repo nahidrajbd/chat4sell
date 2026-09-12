@@ -5,15 +5,18 @@ const PLANS = [
   {
     id: 'starter',
     name: 'Starter',
-    price: '$19',
+    oldPrice: '$19',
+    price: '$7',
     period: '/mo',
     features: ['1 connected page', '500 AI replies / mo', 'Shared inbox', 'Email support'],
   },
   {
     id: 'growth',
     name: 'Growth',
-    price: '$49',
+    oldPrice: '$49',
+    price: '$19',
     period: '/mo',
+    badge: 'Most popular',
     features: ['5 connected pages', '5,000 AI replies / mo', 'Order tracking', 'Broadcast campaigns', 'Priority support'],
     featured: true,
   },
@@ -30,14 +33,21 @@ export default function Pricing() {
   return (
     <section className="page">
       <div className="page-eyebrow">Pricing</div>
-      <h1 className="reveal reveal-1">Simple plans that scale with you</h1>
+      <h1 className="reveal reveal-1">Plans that cost less than one lost sale</h1>
       <p className="lede reveal reveal-2">No setup fees. Cancel any time. All plans include the core AI reply engine.</p>
+
+      <div className="offer-banner reveal reveal-2">
+        <span className="offer-badge">Launch offer</span>
+        Save up to 60% — locked in for life on any plan you start today.
+      </div>
 
       <div className="grid">
         {PLANS.map((p) => (
           <div className={`card${p.featured ? ' featured' : ''}`} id={p.id} key={p.id}>
+            {p.badge && <div className="card-badge">{p.badge}</div>}
             <h3>{p.name}</h3>
             <div className="price">
+              {p.oldPrice && <span className="price-old">{p.oldPrice}</span>}
               {p.price}
               {p.period && <span>{p.period}</span>}
             </div>
