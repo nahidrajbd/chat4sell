@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import Header from './Header.jsx';
 import MobileMenu from './MobileMenu.jsx';
+import { SEO, DEFAULT_SEO } from '../seo.js';
 
 export default function Layout() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,6 +15,7 @@ export default function Layout() {
   useEffect(() => {
     const path = location.pathname === '/' ? '/' : location.pathname.replace(/\/+$/, '');
     const canonicalUrl = `https://chat4sell.com${path}`;
+    const seo = SEO[path] || DEFAULT_SEO;
 
     let link = document.querySelector('link[rel="canonical"]');
     if (!link) {
@@ -23,8 +25,19 @@ export default function Layout() {
     }
     link.setAttribute('href', canonicalUrl);
 
-    const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) ogUrl.setAttribute('content', canonicalUrl);
+    document.title = seo.title;
+
+    const setMeta = (selector, attr, value) => {
+      const el = document.querySelector(selector);
+      if (el) el.setAttribute(attr, value);
+    };
+
+    setMeta('meta[name="description"]', 'content', seo.description);
+    setMeta('meta[property="og:url"]', 'content', canonicalUrl);
+    setMeta('meta[property="og:title"]', 'content', seo.title);
+    setMeta('meta[property="og:description"]', 'content', seo.description);
+    setMeta('meta[name="twitter:title"]', 'content', seo.title);
+    setMeta('meta[name="twitter:description"]', 'content', seo.description);
   }, [location.pathname]);
 
   useEffect(() => {
