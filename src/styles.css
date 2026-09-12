@@ -309,7 +309,24 @@ form.contact-form textarea { resize: vertical; min-height: 120px; }
 }
 .site-footer a { text-decoration: none; }
 .site-footer a:hover { color: #fff; }
-@media (max-width: 600px) { .site-footer { padding: 24px; flex-direction: column; gap: 10px; } }
+.site-footer-links { display: flex; gap: 24px; }
+@media (max-width: 600px) {
+  .site-footer { padding: 24px; flex-direction: column; gap: 10px; align-items: flex-start; }
+  .site-footer-links { gap: 16px; }
+}
+
+/* ---------- policy page ---------- */
+
+.policy-body { margin-top: 40px; max-width: 720px; }
+.policy-body h2 {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; color: #fff;
+  margin: 36px 0 12px;
+}
+.policy-body h2:first-child { margin-top: 0; }
+.policy-body p { font-size: 15px; line-height: 1.7; color: var(--sub); margin: 0 0 12px; }
+.policy-body ul { margin: 0 0 12px; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.policy-body li { font-size: 15px; line-height: 1.6; color: var(--sub); }
+.policy-body a { color: var(--red); }
 
 /* ---------- mobile menu ---------- */
 

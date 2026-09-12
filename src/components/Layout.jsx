@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import Header from './Header.jsx';
 import MobileMenu from './MobileMenu.jsx';
 
@@ -54,6 +54,7 @@ function Footer() {
     <footer className="site-footer">
       <span>© {new Date().getFullYear()} Chat4Sell</span>
       <span className="site-footer-links">
+        <Link to="/privacy-policy">Privacy Policy</Link>
         <a href="mailto:hello@chat4sell.com">hello@chat4sell.com</a>
       </span>
     </footer>
