@@ -52,11 +52,13 @@ export default function Layout() {
 function Footer() {
   return (
     <footer className="site-footer">
-      <span>© {new Date().getFullYear()} Chat4Sell</span>
-      <span className="site-footer-links">
-        <Link to="/privacy-policy">Privacy Policy</Link>
-        <a href="mailto:hello@chat4sell.com">hello@chat4sell.com</a>
-      </span>
+      <div className="site-footer-inner">
+        <span>© {new Date().getFullYear()} Chat4Sell</span>
+        <span className="site-footer-links">
+          <Link to="/privacy-policy">Privacy Policy</Link>
+          <a href="mailto:hello@chat4sell.com">hello@chat4sell.com</a>
+        </span>
+      </div>
     </footer>
   );
 }
