@@ -15,7 +15,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="page">
+    <section className="page contact-page">
       <div className="contact-layout">
         <div className="contact-main">
           <div className="page-eyebrow">Contact</div>
@@ -63,7 +63,7 @@ export default function Contact() {
           <div className="team-grid">
             {FOUNDERS.map((f) => (
               <div className="team-card" key={f.name}>
-                <img src={f.photo} alt={f.name} className="team-photo" width="140" height="180" />
+                <img src={f.photo} alt={f.name} className="team-photo" width="120" height="120" />
                 <div className="team-info">
                   <div className="team-name">{f.name}</div>
                   <div className="team-role">{f.role}</div>

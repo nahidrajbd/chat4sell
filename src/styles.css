@@ -455,36 +455,34 @@ form.contact-form textarea { resize: vertical; min-height: 120px; }
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 80px;
-  align-items: stretch;
+  align-items: start;
 }
 
-.team { margin-top: 0; display: flex; flex-direction: column; height: 100%; }
+.team { margin-top: 0; }
 .team-heading {
   font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 24px; color: #fff;
   margin: 0 0 28px;
 }
 .team-grid {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 20px;
+  gap: 16px;
   max-width: 360px;
 }
 .team-card {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   text-align: left;
-  padding: 18px;
+  padding: 14px;
   border: 1px solid rgba(255, 255, 255, .1);
   background: rgba(255, 255, 255, .02);
 }
 .team-photo {
   flex: none;
   width: 96px;
-  height: 124px;
-  aspect-ratio: 7 / 9;
+  height: 96px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border: 1px solid rgba(255, 255, 255, .1);
   display: block;
@@ -496,11 +494,29 @@ form.contact-form textarea { resize: vertical; min-height: 120px; }
   font-size: 13px; color: var(--lab); margin-top: 5px;
 }
 
+/* ---------- compact contact page ---------- */
+
+.contact-page { padding-top: 64px; padding-bottom: 50px; }
+.contact-page h1 { font-size: clamp(28px, 3.6vw, 44px); line-height: 1.15; }
+.contact-page .lede { margin-top: 12px; font-size: 15px; }
+.contact-page .page-eyebrow { margin-bottom: 8px; }
+.contact-page .contact-layout { gap: 60px; }
+.contact-page form.contact-form { margin-top: 24px; gap: 12px; max-width: 460px; }
+.contact-page form.contact-form input,
+.contact-page form.contact-form textarea { padding: 9px 12px; font-size: 13px; }
+.contact-page form.contact-form textarea { min-height: 70px; }
+.contact-page .team-heading { font-size: 18px; margin-bottom: 14px; }
+.contact-page .team-photo { width: 76px; height: 76px; }
+.contact-page .team-card { padding: 10px; gap: 14px; }
+.contact-page .team-name { font-size: 15px; }
+.contact-page .team-role { font-size: 12px; }
+
 @media (max-width: 900px) {
   .contact-layout { grid-template-columns: 1fr; gap: 60px; }
   .team-grid { max-width: none; }
 }
 @media (max-width: 600px) {
+  .contact-page .team-photo { width: 96px; height: 96px; }
   .contact-layout { gap: 50px; }
 }
 
