@@ -1,0 +1,61 @@
+import React, { useEffect, useState } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
+import Header from './Header.jsx';
+import MobileMenu from './MobileMenu.jsx';
+
+export default function Layout() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    document.body.classList.toggle('nav-open', menuOpen);
+  }, [menuOpen]);
+
+  useEffect(() => {
+    function onKey(e) {
+      if (e.key === 'Escape') setMenuOpen(false);
+    }
+    function onResize() {
+      if (window.innerWidth > 1023) setMenuOpen(false);
+    }
+    window.addEventListener('keydown', onKey);
+    window.addEventListener('resize', onResize);
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      window.removeEventListener('resize', onResize);
+    };
+  }, []);
+
+  return (
+    <div className="screen">
+      <div className="bg" />
+      <div className="bg2" />
+      <div className="scrim" />
+
+      <div className="frame">
+        <Header menuOpen={menuOpen} onToggleMenu={() => setMenuOpen((v) => !v)} />
+        <main>
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
+
+      <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
+    </div>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="site-footer">
+      <span>© {new Date().getFullYear()} Chat4Sell</span>
+      <span className="site-footer-links">
+        <a href="mailto:hello@chat4sell.com">hello@chat4sell.com</a>
+      </span>
+    </footer>
+  );
+}
