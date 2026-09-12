@@ -266,34 +266,17 @@ h1 {
   gap: 28px;
   margin-top: 60px;
 }
+.grid-2 { grid-template-columns: repeat(2, 1fr); max-width: 700px; }
 @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } .page { padding-top: 80px; padding-bottom: 90px; } }
-
-.offer-banner {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 28px;
-  padding: 12px 20px;
-  border: 1px solid rgba(195, 42, 26, .4);
-  background: rgba(195, 42, 26, .1);
-  font-size: 14px;
-  color: var(--sub);
-}
-.offer-badge {
-  flex: none;
-  padding: 4px 10px;
-  background: var(--red);
-  color: #fff;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-}
 @media (max-width: 600px) {
-  .offer-banner { display: flex; }
+  .grid { grid-template-columns: 1fr; }
+  .grid-2 { max-width: none; }
+  .page { padding-top: 80px; padding-bottom: 90px; }
 }
+
+.pricing-note { margin-top: 28px; font-size: 14px; color: var(--lab); }
+.pricing-note a { color: var(--red); text-decoration: none; }
+.pricing-note a:hover { text-decoration: underline; }
 
 .card {
   position: relative;

@@ -2,7 +2,7 @@ export const SEO = {
   '/': {
     title: 'Chat4Sell — AI Sales Chatbot for Facebook, Instagram & WhatsApp',
     description:
-      'Automate customer replies, recover abandoned carts, and close sales 24/7 across Facebook, Instagram & WhatsApp with Chat4Sell’s AI chat agent. Plans from $7/mo.',
+      'Automate customer replies, recover abandoned carts, and close sales 24/7 across Facebook, Instagram & WhatsApp with Chat4Sell’s AI chat agent. Plans from $5/mo.',
   },
   '/features': {
     title: 'Features — AI Auto-Reply, Order Tracking & Team Inbox | Chat4Sell',
@@ -10,9 +10,9 @@ export const SEO = {
       'See how Chat4Sell automates customer replies, tracks orders, and unifies your Facebook, Instagram & WhatsApp inbox with one AI chat agent.',
   },
   '/pricing': {
-    title: 'Pricing — AI Chat Automation Plans from $7/mo | Chat4Sell',
+    title: 'Pricing — AI Chat Automation Plans from $5/mo | Chat4Sell',
     description:
-      'Simple, affordable AI chatbot pricing for Facebook, Instagram & WhatsApp. Plans from $7/mo, no setup fees — save up to 60% with our launch offer.',
+      'Simple, affordable AI chatbot pricing for Facebook, Instagram & WhatsApp. Plans from $5/mo, no setup fees — save up to 70% with our launch offer.',
   },
   '/contact': {
     title: 'Contact Chat4Sell — Get Started with AI Chat Automation',

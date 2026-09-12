@@ -6,26 +6,19 @@ const PLANS = [
     id: 'starter',
     name: 'Starter',
     oldPrice: '$19',
-    price: '$7',
+    price: '$5',
     period: '/mo',
-    features: ['1 connected page', '500 AI replies / mo', 'Shared inbox', 'Email support'],
+    features: ['1 connected page', '300 AI replies / mo', 'Email support'],
   },
   {
-    id: 'growth',
-    name: 'Growth',
+    id: 'pro',
+    name: 'Pro',
     oldPrice: '$49',
-    price: '$19',
+    price: '$12',
     period: '/mo',
     badge: 'Most popular',
-    features: ['5 connected pages', '5,000 AI replies / mo', 'Order tracking', 'Broadcast campaigns', 'Priority support'],
+    features: ['5 connected pages', '5,000 AI replies / mo', 'Priority support'],
     featured: true,
-  },
-  {
-    id: 'enterprise',
-    name: 'Enterprise',
-    price: 'Custom',
-    period: '',
-    features: ['Unlimited pages', 'Unlimited AI replies', 'Dedicated success manager', 'Custom integrations'],
   },
 ];
 
@@ -34,14 +27,9 @@ export default function Pricing() {
     <section className="page">
       <div className="page-eyebrow">Pricing</div>
       <h1 className="reveal reveal-1">Plans that cost less than one lost sale</h1>
-      <p className="lede reveal reveal-2">No setup fees. Cancel any time. All plans include the core AI reply engine.</p>
+      <p className="lede reveal reveal-2">No setup fees. Cancel any time. Save up to 70% — launch pricing.</p>
 
-      <div className="offer-banner reveal reveal-2">
-        <span className="offer-badge">Launch offer</span>
-        Save up to 60% — locked in for life on any plan you start today.
-      </div>
-
-      <div className="grid">
+      <div className="grid grid-2">
         {PLANS.map((p) => (
           <div className={`card${p.featured ? ' featured' : ''}`} id={p.id} key={p.id}>
             {p.badge && <div className="card-badge">{p.badge}</div>}
@@ -66,6 +54,10 @@ export default function Pricing() {
           </div>
         ))}
       </div>
+
+      <p className="pricing-note">
+        Need more volume or custom integrations? <Link to="/contact">Talk to us about Enterprise.</Link>
+      </p>
     </section>
   );
 }
